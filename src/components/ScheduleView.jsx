@@ -64,6 +64,7 @@ const { dayAppointments, weekAppointments, loading } = useAppointments(selectedD
 
           <h2>Week View</h2>
           <WeekView appointments={weekAppointments} startDate={selectedDate} />
+          <Legend/>
         </>
       )}
     </div>

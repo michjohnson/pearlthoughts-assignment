@@ -5,7 +5,7 @@
 - Tech: React (CRA), date-fns, react-datepicker, custom CSS
 
 ## Links
-- GitHub Repo: <repo URL>
+- GitHub Repo: https://github.com/michjohnson/pearlthoughts-assignment>
 - Live Demo (optional): <Netlify/Vercel URL if you deploy>
 - Video Walkthrough (with face): <video link>
 - Cloud API (read-only):
