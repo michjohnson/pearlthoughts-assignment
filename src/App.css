@@ -1,38 +1,167 @@
-.App {
+/* ---------------- GLOBAL ---------------- */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f3f4f6;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------------- CONTAINER ---------------- */
+.scheduler-container {
+  max-width: 1100px;
+  margin: 30px auto;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+}
+
+h2 {
+  color: #1f2937;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 6px;
+  margin-bottom: 15px;
+}
+
+/* ---------------- SELECTORS ---------------- */
+.doctor-selector select,
+.date-picker input {
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 8px;
+  width: 100%;
+  font-size: 0.95rem;
+  box-sizing: border-box;
+}
+
+.doctor-selector,
+.date-picker {
+  margin-bottom: 20px;
+}
+
+/* ---------------- DAY VIEW ---------------- */
+.dayview {
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 15px;
+  background-color: #f9fafb;
+  margin-bottom: 20px;
+}
+
+.dayview strong {
+  display: inline-block;
+  width: 60px;
+  color: #374151;
+}
+
+.dayview .appointment {
+  display: inline-block;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  margin: 4px 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* ---------------- WEEK VIEW ---------------- */
+/* ---------------- WEEK VIEW ---------------- */
+.weekview {
+  overflow-x: auto;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background-color: #ffffff;
+  margin-top: 15px;
+}
+
+.weekview table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
+}
+
+.weekview th {
+  background-color: #e5e7eb;
+  color: #111827;
+  padding: 10px;
   text-align: center;
+  font-weight: 600;
+  border: 1px solid #d1d5db;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.weekview td {
+  border: 1px solid #f3f4f6;
+  padding: 8px;
+  vertical-align: top;
+  position: relative;
+  height: 55px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.weekview td:hover {
+  background-color: #f9fafb;
+}
+
+.weekview .appointment {
+  padding: 5px 8px;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 0.8rem;
+  margin-bottom: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Appointment colors */
+.checkup {
+  background-color: #3b82f6;
+}
+
+.consultation {
+  background-color: #10b981;
+}
+
+.followup {
+  background-color: #f59e0b;
+}
+
+.procedure {
+  background-color: #8b5cf6;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 768px) {
+  .scheduler-container {
+    padding: 15px;
+    margin: 10px;
+  }
+
+  th,
+  td {
+    font-size: 0.8rem;
+  }
+
+  .dayview strong {
+    width: 45px;
+  }
+
+  .appointment {
+    font-size: 0.75rem;
+    padding: 4px 6px;
+  }
+  @media (max-width: 768px) {
+  .weekview table {
+    font-size: 0.75rem;
+    min-width: 600px;
+  }
+
+  .weekview th,
+  .weekview td {
+    padding: 6px;
+  }
+
+  .weekview .appointment {
+    font-size: 0.7rem;
+    padding: 4px 6px;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
