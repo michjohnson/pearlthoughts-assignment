@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+# 🏥 Hospital Appointment Scheduler (Frontend Challenge)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React-based appointment scheduling interface for hospitals that allows viewing doctor schedules in **Day** and **Week** calendar views.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 👩‍💻 Candidate
+**Michelle Johnson**
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🚀 Tech Stack
+- React (Create React App)
+- date-fns
+- react-datepicker
+- Custom CSS for styling
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🔗 Live Demo
+👉 [https://hospital-appointment-scheduler.netlify.app](https://hospital-appointment-scheduler.netlify.app)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🧩 Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 🌞 Day View
+- Displays **appointments from 8 AM to 6 PM** in 30-minute intervals  
+- Color-coded appointment types  
+  - Blue: Checkup  
+  - Green: Consultation  
+  - Orange: Follow-up  
+  - Purple: Procedure  
+- Shows **patient name**, **type**, and **duration**
+- Handles overlapping appointments gracefully  
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 📅 Week View
+- Displays **Monday–Sunday** overview for the selected week  
+- Shows all appointments for the selected doctor  
+- Responsive layout for mobile and desktop  
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 👩‍⚕️ Role-Based Filtering
+- **Front Desk Staff** can select any doctor  
+- **Doctor Role** (in code) can only view their own schedule  
+- Displays doctor name, specialty, and working hours  
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🧱 Architecture
+- **Service Layer:** `src/services/appointmentService.js` – Handles data fetching  
+- **Hook:** `src/hooks/useAppointments.js` – Contains business logic and state  
+- **Components:**  
+  - `DayView.jsx`  
+  - `WeekView.jsx`  
+  - `DoctorSelector.jsx`  
+  - `Legend.jsx`  
+- **Clean separation of concerns** between data, logic, and UI  
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## ⚙️ How to Run
+```bash
+npm install
+npm start
